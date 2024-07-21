@@ -67,55 +67,42 @@ private:
 int health = 100;
 int healingPower = 8;
 public:
- void PlayerIntroduction () 
-	{ 
+
  
-cout <<
-"Mansi stood at the edge of the village, holding her son's hand." << endl;
-	
-cout <<
-	  "They looked at the old mansion that was now their home. The sun was setting, casting long shadows."
-	  << endl;
-	
- 
-cout <<
-	  "After her husband's sudden death, Mansi was heartbroken but determined."
-	  << endl;
-	
-cout <<
-	  "She wanted to protect her son and uncover the secrets the mansion held."
-	  << endl;
-	
- 
-cout <<
-	  "The villagers spoke of strange rituals and a terrifying presence within the mansion,"
-	  << endl;
-	
-cout <<
-	  "but Mansi was not afraid. She was ready to confront whatever lay inside."
-	  << endl;
-	
- 
-cout <<
-	  "As they walked into the mansion, Mansi held her son's hand tightly." <<
-	  endl;
-	
-cout <<
-	  "A battle for their lives was about to begin, but she was prepared." <<
-	  endl;
-	
-cout <<
-	  "Mansi was strong, and nothing could stop her from protecting her son."
-	  << endl;
-  
- 
-} 
+
  
 Player () 
  { 
-     
-PlayerIntroduction ();
-     
+cout <<
+      "Mansi stood at the edge of the village, holding her son's hand." << endl;
+cout <<
+	  "They looked at the old mansion that was now their home. The sun was setting, casting long shadows."
+	  << endl;
+cout <<
+	  "After her husband's sudden death, Mansi was heartbroken but determined."
+	  << endl;
+cout <<
+	  "She wanted to protect her son and uncover the secrets the mansion held."
+	  << endl;
+cout <<
+	  "The villagers spoke of strange rituals and a terrifying presence within the mansion,"
+	  << endl;
+cout <<
+	  "but Mansi was not afraid. She was ready to confront whatever lay inside."
+	  << endl;
+cout <<
+	  "As they walked into the mansion, Mansi held her son's hand tightly." <<
+	  endl;
+cout <<
+	  "A battle for their lives was about to begin, but she was prepared." <<
+	  endl;
+cout <<
+	  "Mansi was strong, and nothing could stop her from protecting her son."
+	  << endl;
+	  
+	  cout<<"..............................................................."<<endl;
+	  
+	  cout<<"Your Current Health is::"<<health<<endl;
  } 
 };
 int 
@@ -127,10 +114,15 @@ main ()
  cout<<endl;
  cout<<endl;
  cout<<"Hi, Welcome to Rezer:Cursed"<<endl;
+
+
+ 
+ do
+ {
  cout<<"Please press s to start the game"<<endl;
  cout<<"Any other key to exit the game"<<endl;
- cin>>userInput;
- if(userInput=='s' || userInput=='S')
+  cin>>userInput;
+     if(userInput=='s' || userInput=='S')
  {
      Player * player = new Player ();
  }
@@ -138,5 +130,8 @@ main ()
  else
  {
      cout<<"Thank you for playing the game";
+ } 
  }
+ while(userInput=='s' || userInput=='S');
+
  }
