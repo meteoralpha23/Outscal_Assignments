@@ -1,0 +1,40 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+
+ int size;
+ int peakElement;
+ cout<<"Enter the size of an Array\n";
+ cin>>size;
+ 
+ int arr[size];
+ 
+ cout<<"Enter the elements in array"<<endl;
+ 
+ for(int i=0;i<size;i++)
+ {
+     cin>>arr[i];
+ }
+ 
+    if (size == 1)
+        return 0;
+    if (arr[0] >= arr[1])
+        return 0;
+    if (arr[size - 1] >= arr[size - 2])
+        return  - 1;
+ 
+ for(int i=0;i<size;i++)
+ {
+    if((arr[i]>arr[i-1])&&(arr[i]>arr[i+1]))
+    {
+        peakElement = arr[i];
+    }
+ }
+ 
+ cout<<"Peak element  is"<<peakElement<<endl;
+ 
+
+    return 0;
+}
