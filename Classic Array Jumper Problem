@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm> // For max function
+using namespace std;
+
+int main() {
+    int arr[5] = {2, 3, 0, 1, 4};
+    
+    int farthest = 0;
+    int currentend = 0;
+    int jump = 0;
+    
+    for (int i = 0; i < 5; i++) {
+        farthest = max(farthest, i + arr[i]); // Update the farthest reach
+        
+        if (i == currentend) { // If we have reached the end of the current jump range
+            jump++;              // Increase the jump count
+            currentend = farthest; // Update the currentend to the farthest point reachable
+
+            if (currentend >= 4) break; // If we've reached or passed the last index
+        }
+    }
+    
+    cout << jump; // Output the minimum number of jumps
+    
+    return 0;
+}
